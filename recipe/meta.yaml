@@ -1,5 +1,5 @@
 {% set name = "rod" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rod-{{ version }}.tar.gz
-  sha256: 34c907554fbfd93cb864c6c09fadf1c51526e8fadc3307aaea12b80503b61a68
+  sha256: 2516cc7864c3d6060b20b6921bd3d53103626fe995ea27fee4b3b78941fe2173
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - trimesh
     - resolve-robotics-uri-py
     - python >=3.8
     - coloredlogs
