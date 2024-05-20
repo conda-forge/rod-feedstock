@@ -43,6 +43,7 @@ test:
   source_files:
     - tests/*
   requires:
+    - git
     - idyntree
     - pip
     - pytest
