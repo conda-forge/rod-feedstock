@@ -39,8 +39,14 @@ test:
     - rod
   commands:
     - pip check
+    - pytest -vv --pyargs rod tests/
+  source_files:
+    - tests/*
   requires:
+    - idyntree
     - pip
+    - pytest
+    - robot_descriptions
 
 about:
   home: https://github.com/ami-iit/rod
