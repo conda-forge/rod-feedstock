@@ -12,11 +12,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.10
     - wheel
     - setuptools >=45
     - setuptools-scm >=6.2
@@ -24,8 +24,10 @@ requirements:
   run:
     - trimesh
     - resolve-robotics-uri-py
-    - python >=3.8
+    - python >=3.10
     - coloredlogs
+    - gz-tools2
+    - libsdformat13
     - mashumaro
     - numpy
     - packaging
@@ -37,8 +39,15 @@ test:
     - rod
   commands:
     - pip check
+    - pytest -vv --pyargs rod tests/
+  source_files:
+    - tests/*
   requires:
+    - git
+    - idyntree
     - pip
+    - pytest
+    - robot_descriptions
 
 about:
   home: https://github.com/ami-iit/rod
