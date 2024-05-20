@@ -26,6 +26,8 @@ requirements:
     - resolve-robotics-uri-py
     - python >=3.10
     - coloredlogs
+    - gz-tools2
+    - libsdformat13
     - mashumaro
     - numpy
     - packaging
