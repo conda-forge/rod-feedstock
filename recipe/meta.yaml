@@ -1,5 +1,5 @@
 {% set name = "rod" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rod-{{ version }}.tar.gz
-  sha256: ca3e4ed4db298b4825e7e66cb58edecedbedb22318679b66c0118db34f5565a3
+  sha256: ec2e9f606c036a67f77491c7247fc8de69a7393d51c52b117083215bd0cc77cf
 
 build:
   noarch: python
