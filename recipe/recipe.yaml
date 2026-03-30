@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: rod
-  version: "0.4.1"
+  version: "0.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/rod-${{ version }}.tar.gz
-  sha256: 34f8a69f92eb4398e20dc7ba6d97a5533d11e6b6e17579bebe950bee13218ec0
+  sha256: 2b33adf32551578bcfd17759f650dde33693a3d70879df9094ea7654589395ea
 
 build:
   number: 0
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python 3.10.*
+    - python ${{ python_min }}.*
     - wheel
     - setuptools >=60
     - setuptools-scm >=8
@@ -42,13 +42,13 @@ tests:
       imports:
         - rod
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
   - files:
       source:
         - tests/*
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         - git
         - idyntree >=12.4
         - pip
