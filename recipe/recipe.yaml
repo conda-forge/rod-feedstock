@@ -20,17 +20,16 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - wheel
-    - setuptools >=60
-    - setuptools-scm >=8
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - trimesh
     - resolve-robotics-uri-py
     - python >=${{ python_min }}
     - coloredlogs
-    - gz-tools2
-    - libsdformat13
+    - gz-tools
+    - libsdformat
     - mashumaro
     - numpy
     - packaging
